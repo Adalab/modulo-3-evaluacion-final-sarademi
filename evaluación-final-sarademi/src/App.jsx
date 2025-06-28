@@ -4,6 +4,8 @@ import CharacterList from './components/CharacterList';
 import './App.css';
 import NameFilter from './components/Filters/NameFilter';
 import HouseFilter from './components/Filters/HouseFilter';
+import { Routes, Route } from 'react-router-dom';
+import CharacterDetail from './components/CharacterDetail';
 
 
 
@@ -35,13 +37,27 @@ function App() {
     );
 
   return (
-    <div className="App">
-      <img src="/harry-logo.png" alt="Harry Potter logo" className="header-logo" />
-      <NameFilter filterName={filterName} handleFilterName={handleFilterName} />
-      <HouseFilter filterHouse={filterHouse} handleFilterHouse={handleFilterHouse} />
-      <CharacterList characters={filteredCharacters} />  
-    </div>
-  );
+  <div className="App">
+    <img src="/harry-logo.png" alt="Harry Potter logo" className="header-logo" />
+
+    <Routes>
+      {/* Ruta principal con filtros y listado */}
+      <Route
+        path="/"
+        element={
+          <>
+            <NameFilter filterName={filterName} handleFilterName={handleFilterName} />
+            <HouseFilter filterHouse={filterHouse} handleFilterHouse={handleFilterHouse} />
+            <CharacterList characters={filteredCharacters} />
+          </>
+        }
+      />
+
+      {/* Ruta para detalle de personaje */}
+      <Route path="/character/:characterId" element={<CharacterDetail characters={characters} />} />
+    </Routes>
+  </div>
+);
 }
 
 

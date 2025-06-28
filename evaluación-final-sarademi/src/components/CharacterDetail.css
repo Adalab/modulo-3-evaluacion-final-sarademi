@@ -1,0 +1,65 @@
+.character-detail-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 1rem;
+  background-color: #f4f4f4; /* fondo general */
+  min-height: 100vh;
+}
+
+.character-card-detail {
+  max-width: 600px;
+  width: 100%;
+  padding: 2rem 2.5rem;        
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;         
+  color: white;               
+  display: flex;
+  flex-direction: column;
+  align-items: center;         
+  gap: 1rem;                    
+}
+
+/* Fondo por casa */
+.character-card-detail.gryffindor {
+  background-color: #7f0909;
+}
+
+.character-card-detail.slytherin {
+  background-color: #1a472a;
+}
+
+.character-card-detail.ravenclaw {
+  background-color: #0e1a40;
+}
+
+.character-card-detail.hufflepuff {
+  background-color: #ecb939;
+  color: black;
+}
+
+.character-card-detail.unknown {
+  background-color: #444;
+}
+
+.character-card-detail img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.back-button {
+  margin-top: 2rem;
+  padding: 0.7rem 1.5rem;
+  background-color: white;
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.back-button:hover {
+  background-color: #ddd;
+}
