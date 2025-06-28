@@ -35,6 +35,10 @@ function App() {
     .filter((character) =>
       filterHouse === '' ? true : character.house === filterHouse
     );
+  
+  const sortedCharacters = [...filteredCharacters].sort((a, b) =>
+  a.name.localeCompare(b.name)
+  );
 
   return (
   <div className="App">
@@ -48,7 +52,7 @@ function App() {
           <>
             <NameFilter filterName={filterName} handleFilterName={handleFilterName} />
             <HouseFilter filterHouse={filterHouse} handleFilterHouse={handleFilterHouse} />
-            <CharacterList characters={filteredCharacters} />
+            <CharacterList characters={sortedCharacters} />
           </>
         }
       />
