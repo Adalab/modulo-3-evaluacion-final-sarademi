@@ -63,3 +63,22 @@
 .back-button:hover {
   background-color: #ddd;
 }
+
+.emblem {
+  max-width: 100px;
+  width: 100%;
+  height: auto;
+  margin: 0.5rem auto 1rem;
+  display: block;
+}
+
+@media (max-width: 600px) {
+
+  .character-card-detail {
+    padding: 1.5rem;
+  }
+
+  .back-button {
+    width: 100%;
+  }
+}

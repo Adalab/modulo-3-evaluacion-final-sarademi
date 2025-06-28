@@ -10,14 +10,27 @@ function CharacterDetail({ characters }) {
   const handleBackClick = () => {
   navigate('/');
   };
+  const houseEmblems = {
+  Gryffindor: '/gryffindor.png',
+  Slytherin: '/slytherin.png',
+  Ravenclaw: '/ravenclaw.png',
+  Hufflepuff: '/hufflepuff.png'
+};
 
   return (
     <div className="character-detail-wrapper">
     <div className={`character-card-detail ${houseClass}`}>
       <img src={character.image || 'https://placehold.co/400x300?text=Harry+Potter'} alt={`Foto de ${character.name}`} />
       <h2>{character.name}</h2>
+      {character.house && (
+      <img
+      src={houseEmblems[character.house]}
+      alt={`Emblema de ${character.house}`}
+      className="emblem"
+      />
+      )}
       <p>Casa: {character.house || 'Desconocida'}</p>
-      <p>Estado: {character.alive ? 'Vivo' : 'Muerto'}</p>
+      <p>Estado: {character.alive ? '❤️ Vivo' : '☠️ Muerto'}</p>
       <p>Género: {character.gender}</p>
       <p>Especie: {character.species}</p>
       {character.alternate_names.length > 0 && (
