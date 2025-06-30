@@ -45,7 +45,7 @@ function App() {
     <img src="/harry-logo.png" alt="Harry Potter logo" className="header-logo" />
 
     <Routes>
-      {/* Ruta principal con filtros y listado */}
+     
       <Route
         path="/"
         element={
@@ -56,8 +56,6 @@ function App() {
           </>
         }
       />
-
-      {/* Ruta para detalle de personaje */}
       <Route path="/character/:characterId" element={<CharacterDetail characters={characters} />} />
     </Routes>
   </div>
