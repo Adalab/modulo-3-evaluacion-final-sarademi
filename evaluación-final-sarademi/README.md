@@ -1,12 +1,25 @@
-# React + Vite
+# 🧙‍♀️Buscador de personajes de Harry Potter 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto muestra una lista de personajes de Harry Potter usando React. Puedes buscar personajes por nombre, filtrarlos por casa y ver más información en su tarjeta de detalle.
 
-Currently, two official plugins are available:
+## ✨ Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Filtro por nombre y casa
+- Listado con imágenes y datos
+- Página de detalle por personaje
+- Rutas con React Router
+- Estilo personalizado y responsive
+- Varita mágica como cursor y brillitos ✨
 
-## Expanding the ESLint configuration
+## 🧰 Tecnologías
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- React Router
+- HTML / CSS
+- JavaScript (ES6)
+- Vite
+
+## 🚀 Cómo usar
+
+1. Clona el repositorio:
+https://github.com/Adalab/modulo-3-evaluacion-final-sarademi.git
