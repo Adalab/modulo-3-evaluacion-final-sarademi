@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import CharacterCard from './CharacterCard';
 
 function CharacterList({ characters }) {
@@ -9,5 +10,16 @@ function CharacterList({ characters }) {
     </section>
   );
 }
+
+CharacterList.propTypes = {
+  characters: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      name: PropTypes.string,
+      image: PropTypes.string,
+      species: PropTypes.string,
+    })
+  ).isRequired,
+};
 
 export default CharacterList;

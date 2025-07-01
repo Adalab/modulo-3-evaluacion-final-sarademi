@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 function CharacterCard({ character }) {
   const placeholder = 'https://placehold.co/400x300?text=Harry+Potter';
@@ -14,5 +15,13 @@ function CharacterCard({ character }) {
     </Link>
   );
 }
+
+CharacterCard.propTypes = {
+  character: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    image: PropTypes.string,
+    species: PropTypes.string.isRequired,
+  }).isRequired
+};
 
 export default CharacterCard;

@@ -1,7 +1,9 @@
+import PropTypes from 'prop-types';
+
 function NameFilter({ filterName, handleFilterName }) {
   return (
     <form className="form">
-      <label htmlFor="name">Buscar por nombre:</label>
+      <label htmlFor="name">¿A quién buscas?</label>
       <input
         type="text"
         id="name"
@@ -13,5 +15,10 @@ function NameFilter({ filterName, handleFilterName }) {
     </form>
   );
 }
+
+NameFilter.propTypes = {
+  filterName: PropTypes.string.isRequired,
+  handleFilterName: PropTypes.func.isRequired,
+};
 
 export default NameFilter;
